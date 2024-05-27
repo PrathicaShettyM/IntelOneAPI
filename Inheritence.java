@@ -1,10 +1,10 @@
-class Person{
+class Person{ // Base class/ parent class
     public String name;
     public String address;
     public int age;
 }
 
-class Student extends Person{
+class Student extends Person{ // Derieved class / child class
     // inheriting features from person class
     // student class now has totally 5 properties
     public int marks;
