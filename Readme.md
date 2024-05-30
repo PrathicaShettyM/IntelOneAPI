@@ -24,6 +24,43 @@ This repository contains OOPs concepts in Java programming language.
     - `Zero arguement constructor`: default values of the datatype will be printed
     - `Parameterised constructor`: we can initialise the values.
 
+### Polymorphism
+- poly means "many" and morphism means "forms"
+- They are of 2 types:
+1. Static polymorphism
+Ex: Method overloading, method hiding
+
+- `Method overloading`: 2 methods are said to be overloaded, if they both have the same name but with different arguement types.
+    - In case of method overloading, `compiler` will bind the call of the method to the body of the method 
+    - JVM should just execute the method body, so we call method overloading as "Compile Time Binding / Early binding  / Eager binding"
+    - A method is overloaded only when it differs in arguement, if 2 methods of same name doesn't have any arguement then we get a compile time error. 
+
+- Compiler binds the call based on the arguement
+    - If exact match is found => bind the call
+    - If exact match is not found => perform `implicit typecasting` till it reaches to bind
+    - upon implicit typecasting also if the call can't be binded then it would result in `Compile time error`
+
+    - Implicit typecasting chart(Explicit is just opposite)
+```
+byte -> short -> int -> long -> float -> double
+        char--->int
+```
+
+
+2. Dynamic polymorphism
+Ex: Method overriding
+
+
+
+
+
+
+
+
+
+
+
+
 ### Points to be noted
 1. Depending upon the position of declaration and its behaviours, there are 3 types of variable:
 (There is no global variables in Java)
@@ -52,3 +89,13 @@ This repository contains OOPs concepts in Java programming language.
 3. Based on the type of value stored in the variables, it is of 2 types:
 - `primitive variables`: int a = 10;
 - `reference varaibles`: Student std = new Student();
+
+4. Object is the parent class for all the classes in Java
+                                      Object(Class)
+        ________________________________|__________________________________
+        |          |          |         |          |        |       |      |
+    String StringBuilder StringBuffer Number Character Boolean Thread Runnable
+                _________________________|___________________
+               |        |       |        |         |         |
+            Byte       Short    Integer  Long     Float      Double
+
