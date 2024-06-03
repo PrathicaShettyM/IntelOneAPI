@@ -25,6 +25,15 @@ class Add{
     }
 }
 
+class SampleCheck{
+    public void methodOne(String s){
+        System.out.println("This is a String version.....");
+    }
+    public void methodOne(Object o){
+        System.out.println("This is an Object version.....");
+    }
+}
+
 public class CompileTimePolymorphism {
     public static void main(String[] args) {
         Add a = new Add();
@@ -39,5 +48,16 @@ public class CompileTimePolymorphism {
         // a.add(10.5); -> gives compile time error
 
         a.add(10,20f); // int float
+
+
+
+        SampleCheck sc = new SampleCheck();
+        sc.methodOne(new Object()); // object
+        sc.methodOne("This is a sentence"); // string
+        sc.methodOne(null); // coz the default value of string is null
+        // null is usually with with refernce type of data: it could be given for both string and object
+        // But precedence is given to String in this case 
+        // coz the string is child here and object is parent, complier gives preference to child in this case
+        // when both "String" and "StringBuffer" are present, then compiler throws an error
     }
 }

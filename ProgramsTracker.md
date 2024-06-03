@@ -8,4 +8,4 @@
 
 4. `StudentRecord.java`: data hiding, getter and setter methods
 
-5. `MiniProjects -> BankApp -> Bank.java`: 
+5. `Bank.java`: mini project on java some of the oops concepts
